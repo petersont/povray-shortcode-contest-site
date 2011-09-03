@@ -13,6 +13,6 @@ module ApplicationHelper
 
   # our logo
   def logo
-    image_tag("logo.pnt", :alt => "POVRay woo!", :class => "round")
+    image_tag("logo.png", :alt => "POVRay woo!", :class => "round")
   end
 end
