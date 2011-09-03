@@ -6,7 +6,16 @@ require 'spec/autorun'
 require 'spec/rails'
 
 # Uncomment the next line to use webrat's matchers
-#require 'webrat/integrations/rspec-rails'
+# tried it... nope... see way below 
+# require 'webrat/integrations/rspec-rails'
+
+#hmm https://github.com/brynary/webrat says to do this
+require "webrat"
+
+Webrat.configure do |config|
+  config.mode = :rails
+end
+
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -51,4 +60,8 @@ Spec::Runner.configure do |config|
   # == Notes
   #
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
+
+
+
+
 end

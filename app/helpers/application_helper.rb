@@ -10,4 +10,9 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
+
+  # our logo
+  def logo
+    image_tag("logo.pnt", :alt => "POVRay woo!", :class => "round")
+  end
 end
