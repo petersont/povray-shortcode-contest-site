@@ -20,5 +20,19 @@ describe UsersController do
       response.should have_tag("title", /Sign up/)
     end
   end
-  
+
+  describe "GET 'show'" do
+    
+    before(:each) do
+      @user = Factory(:user)
+      #arrange for User.find(params[:id]) to find the right user.
+      User.stub!(:find, @user.id).and_return(@user) #stub is from rspec, avoid 
+                                             #hits to database
+    end
+
+    it "should be successful" do
+      get :show, :id => @user   #automatically converts @user to @user.id 
+      response.should be_success
+    end
+  end  
 end
