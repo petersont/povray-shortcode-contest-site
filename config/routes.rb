@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   #root
   map.root :controller => 'pages', :action => 'home'
 
+  map.signup '/signup', :controller => 'users', :action => 'new'
 
   #everything below is untouched
 

@@ -23,4 +23,13 @@ describe "Layout links" do
   end
 =end
 
+
+#same file as for other layout links, even though 
+#the signup page is in a DIFFERENT CONTROLLER.
+#we can do this cuz we're using integration tests!
+  it "should have a signup page at '/signup'" do
+    get '/signup'
+    response.should render_template('users/new')
+  end
+
 end
